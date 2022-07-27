@@ -1,0 +1,31 @@
+package model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class WeatherResponse {
+	@JsonProperty("location")
+	private String location;
+	private String data;
+	private String currentobservation;
+	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
+	public String getCurrentobservation() {
+		return currentobservation;
+	}
+	public void setCurrentobservation(String currentobservation) {
+		this.currentobservation = currentobservation;
+	}
+	
+	
+}

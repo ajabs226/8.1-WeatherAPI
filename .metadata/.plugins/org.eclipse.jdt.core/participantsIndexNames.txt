@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\aj_ab\OneDrive\Desktop\8.1-WeatherAPI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\874924437.index
+\weather-lab\src\main\java

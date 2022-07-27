@@ -1,0 +1,21 @@
+package service;
+
+import javax.tools.DocumentationTool.Location;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import co.grandcircus.weatherlab.WeatherResponse;
+
+@Service
+public class WeatherApiService {
+
+	private static RestTemplate request = new RestTemplate();
+	
+	public String getAreaDescription() {
+		String url = "https://forecast.weather.gov/MapClick.php?lat=42.3831&lon=-83.1022&FcstType=json";
+		Location response = request.getForObject(url, WeatherResponse.class).getLocation();
+		
+		return response.getAreaDescription();
+	}
+}

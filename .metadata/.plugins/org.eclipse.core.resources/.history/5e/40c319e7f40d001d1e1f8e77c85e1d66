@@ -1,0 +1,11 @@
+package model;
+
+public class Location {
+
+	private String areaDescription;
+	
+	public String getAreaDescription() {
+		return areaDescription;
+	}
+		
+}

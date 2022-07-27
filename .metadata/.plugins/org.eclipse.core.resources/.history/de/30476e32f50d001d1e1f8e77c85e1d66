@@ -1,0 +1,21 @@
+package co.grandcircus.weatherlab;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class WeatherController {
+
+	@Autowired
+	private WeatherApiService weatherService;
+	
+	@RequestMapping("/")
+	public String displayHome(@RequestParam double longitude, @RequestParam double latitude, Model model) {
+		model.addAttribute("location", weatherService.getAreaDescription(latitude, longitude));
+		//System.out.println(weatherService.getAreaDescription());
+		return "index";
+	}
+}

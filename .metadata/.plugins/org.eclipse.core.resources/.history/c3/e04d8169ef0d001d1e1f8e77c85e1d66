@@ -1,0 +1,15 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class WeatherController {
+
+	@RequestMapping("/")
+	public String displayHome(Model model) {
+		model.addAttribute("location", weatherService.getAreaDescription)
+		return "index";
+	}
+}

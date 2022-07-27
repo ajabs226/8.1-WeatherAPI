@@ -1,0 +1,16 @@
+package model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class CurrentObservation {
+	private String name;
+	
+	@JsonProperty("Winds")
+	private String winds;
+	
+	@JsonProperty("Gust")
+	private int gust;
+	
+	@JsonProperty("Visibility")
+	private double visibility;
+}
